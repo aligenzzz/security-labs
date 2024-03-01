@@ -41,7 +41,7 @@ def ticket_granting_server(package: dict) -> dict:
     if aut['c'] != tgt['c'] or aut['t2'] != tgt['t1']:
         raise Exception(blue('TGS: Invalid AUT block!'))
     # checking for time expiration
-    if int(tgt['t1']) + int(tgt['p1']) > int(CURRENT):
+    if int(tgt['t1']) + int(tgt['p1']) < int(CURRENT):
         raise Exception(blue('TGS: Session time is up!'))
 
     # forming package to Client
@@ -74,7 +74,7 @@ def service_server(package: dict) -> dict:
     if aut['c'] != tgt['c'] or aut['t4'] != tgt['t3']:
         raise Exception(green('SS: Invalid AUT block!'))
     # checking for time expiration
-    if int(tgt['t3']) + int(tgt['p2']) > int(CURRENT):
+    if int(tgt['t3']) + int(tgt['p2']) < int(CURRENT):
         raise Exception(green('SS: Session time is up!'))
 
     # forming package to Client

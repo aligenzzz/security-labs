@@ -16,4 +16,4 @@ TGS_ID = '2222'
 SS_ID = '0000'
 
 PERIOD = '1'
-CURRENT = '3'
+CURRENT = '1'
