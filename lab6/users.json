@@ -1,0 +1,14 @@
+{
+    "aligenzzz": {
+        "password": "alina",
+        "role": "user"
+    },
+    "admin": {
+        "password": "admin",
+        "role": "admin"
+    },
+    "pimpim": {
+        "password": "pampam",
+        "role": "user"
+    }
+}
